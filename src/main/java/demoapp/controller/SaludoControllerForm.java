@@ -27,6 +27,12 @@ public class SaludoControllerForm {
             return "formRegistro";
         }
         model.addAttribute("mensaje", service.saluda(userData.getNombre()));
+        String invertida = new StringBuilder(userData.getNombre()).reverse().toString();
+        if ((invertida.equals(userData.getNombre()))) {
+            System.out.println("Palindroma");
+        } else {
+            System.out.println("No palíndroma");
+        }
         return "saludo";
     }
 }
