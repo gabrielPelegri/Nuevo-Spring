@@ -26,13 +26,15 @@ public class SaludoControllerForm {
         if (bindingResult.hasErrors()) {
             return "formRegistro";
         }
+        String palindroma;
         model.addAttribute("mensaje", service.saluda(userData.getNombre()));
-        String invertida = new StringBuilder(userData.getNombre()).reverse().toString();
-        if ((invertida.equals(userData.getNombre()))) {
-            System.out.println("Palindroma");
+        String invertida = new StringBuilder(userData.getNombre()).reverse().toString().toLowerCase();
+        if ((invertida.equals(userData.getNombre().toLowerCase()))) {
+            palindroma="El nombre es una palabra palíndroma";
         } else {
-            System.out.println("No palíndroma");
+            palindroma="El nombre no es una palabra palíndroma";
         }
+        model.addAttribute("palindroma",palindroma);
         return "saludo";
     }
 }
