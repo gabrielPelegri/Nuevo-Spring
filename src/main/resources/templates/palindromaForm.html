@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:input="http://www.w3.org/1999/xhtml">
+<head xmlns:th="http://www.thymeleaf.org">
+    <meta charset="UTF-8">
+    <title>Palindroma</title>
+</head>
+<body>
+<form th:action="@{/palindroma}" th:object="${palabra}" method="post">
+    <table>
+        <tr>
+            <td>Introduce palabra:</td>
+            <td><input type="text" name="palabra" /></td>
+    </table>
+</form>
+</body>
+</html>

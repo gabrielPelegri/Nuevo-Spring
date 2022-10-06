@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head xmlns:th="http://www.thymeleaf.org">
+    <meta charset="UTF-8">
+    <title>Numeros</title>
+</head>
+<body>
+<div>
+    <form th:action="@{/numeros}" th:object="${numero}" method="post">
+        <input type="number" name="numero"/>
+    </form>
+</div>
+
+</body>
+</html>
