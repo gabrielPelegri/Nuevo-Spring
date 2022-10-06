@@ -5,11 +5,12 @@
     <title>Numeros</title>
 </head>
 <body>
-<div>
-    <form th:action="@{/numeros}" th:object="${numero}" method="post">
-        <input type="number" name="numero"/>
-    </form>
-</div>
-
+<form th:action="@{/numeros}" th:object="${numero}" method="post">
+    <table>
+        <tr>
+            <td>Introduce un número:</td>
+            <td><input type="text" name="numero"/></td>
+    </table>
+</form>
 </body>
 </html>

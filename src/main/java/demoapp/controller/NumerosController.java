@@ -23,7 +23,7 @@ public class NumerosController {
         if (numero%2==0) {
             response = "El número " + numero + " es un número par";
         } else {
-            response = "El número " + numero + " no es un número par";
+            response = "El número " + numero + " es un número impar";
         }
         model.addAttribute("response", response);
         return "response";
