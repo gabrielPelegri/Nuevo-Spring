@@ -5,7 +5,7 @@
 el tipo del modelo del formulario (UserData) cambiando la mayúscula de
 la primera letra por minúscula (userData) -->
 <form th:action="@{/saludoform}" th:object="${userData}" method="post">
-    <table>
+    <table class="table-bordered">
         <tr>
             <td>Nombre:</td>
             <td><input type="text" th:field="*{nombre}" /></td>
